@@ -40,6 +40,7 @@ public class TreeAdapter extends RecyclerView.Adapter<TreeAdapter.TreeViewHolder
                 Intent intent = new Intent(context, ShowImageActivity.class);
                 String id = trees.get(position).getId() + "";
                 intent.putExtra("id", id);
+                intent.putExtra("name", trees.get(position).getName());
                 context.startActivity(intent);
             }
         });

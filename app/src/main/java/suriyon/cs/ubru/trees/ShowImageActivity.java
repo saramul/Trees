@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -31,6 +32,7 @@ public class ShowImageActivity extends AppCompatActivity {
     private ImageAdapter adapter;
     private ArrayList<Image> images;
     private RequestQueue queue;
+    private TextView tvTreeName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,8 @@ public class ShowImageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
-
+        String name = intent.getStringExtra("name");
+        tvTreeName.setText(name);
         parseJSON(id);
     }
 
@@ -92,5 +95,6 @@ public class ShowImageActivity extends AppCompatActivity {
 
     private void matchView() {
         rcvTreeImages = findViewById(R.id.rcv_image_tree);
+        tvTreeName = findViewById(R.id.tv_tree_name_title);
     }
 }
