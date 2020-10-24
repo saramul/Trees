@@ -59,10 +59,10 @@ public class ShowImageActivity extends AppCompatActivity {
                             for(int i=0; i<jsonArray.length(); i++){
                                 JSONObject image = jsonArray.getJSONObject(i);
 
-                                String imgName = image.getString("name");
-                                String imgUrl = image.getString("image_name");
+                                String treeName = image.getString("name");
+                                String imgName = image.getString("image_name");
 
-                                images.add(new Image(imgName, imgUrl));
+                                images.add(new Image(treeName, imgName));
                             }
                             adapter = new ImageAdapter(ShowImageActivity.this, images);
                             rcvTreeImages.setAdapter(adapter);

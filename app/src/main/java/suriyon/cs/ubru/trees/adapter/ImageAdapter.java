@@ -36,8 +36,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         Image image = images.get(position);
         String url = "http://suriyon.cs.ubru.ac.th/ubrutree/images/";
-        String treeName = image.getImageName();
-        String imgUrl = url + image.getImageUrl();
+        String treeName = image.getTreeName();
+        String imgUrl = url + image.getImageName();
 
         holder.tvTreeName.setText(treeName);
         Picasso.get().load(imgUrl).fit().centerInside().into(holder.imgTree);

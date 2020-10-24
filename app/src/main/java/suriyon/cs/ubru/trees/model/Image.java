@@ -1,15 +1,23 @@
 package suriyon.cs.ubru.trees.model;
 
 public class Image {
+    private String treeName;
     private String imageName;
-    private String imageUrl;
 
     public Image() {
     }
 
-    public Image(String imageName, String imageUrl) {
-        this.imageName = imageName;
-        this.imageUrl = imageUrl;
+    public Image(String treeName, String imageUrlName) {
+        this.treeName = treeName;
+        this.imageName = imageUrlName;
+    }
+
+    public String getTreeName() {
+        return treeName;
+    }
+
+    public void setTreeName(String treeName) {
+        this.treeName = treeName;
     }
 
     public String getImageName() {
@@ -18,13 +26,5 @@ public class Image {
 
     public void setImageName(String imageName) {
         this.imageName = imageName;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 }
