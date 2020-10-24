@@ -44,7 +44,7 @@ public class ShowImageActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("name");
-        tvTreeName.setText(name);
+        tvTreeName.setText("ชื่อต้นไม้: " + name);
         parseJSON(id);
     }
 
